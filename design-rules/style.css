@@ -33,7 +33,7 @@ body {
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 }
 
 h2 {
@@ -84,11 +84,15 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .header-text-box {
   align-self: center;
+}
+
+.header-text-box h1 {
+  margin-bottom: 48px;
 }
 
 h1 {
@@ -119,7 +123,7 @@ img {
 .features-icon {
   height: 30px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .features-title {
@@ -155,6 +159,14 @@ img {
   margin-bottom: 24px;
   font-size: 16px;
   line-height: 1.7;
+  color: #e6fcf5;
+}
+
+/* to make the text slightly blend in with the background color
+to make it less important. Hence, chose a color from the same heirarchy on Open color
+Teal - 1 */
+.testimonial-author {
+  color: #c3fae8;
 }
 
 /* CHAIRS */
@@ -162,6 +174,10 @@ img {
   /*         x-off y-off blur-radius spread-radius color */
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
   border-radius: 12px;
+}
+
+.chair img {
+  margin-bottom: 24px;
 }
 
 .chair-box {
@@ -175,14 +191,14 @@ h3 {
 
 .chair-details {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .chair-details li {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .chair-details li:last-child {
@@ -192,6 +208,7 @@ h3 {
 .chair-icon {
   width: 20px;
   height: 20px;
+  color: #087f5b;
 }
 
 .chair-price {
