@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+*/
+
+/* 
+  Main color : #087f5b
+  Gray color : #343a40 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: black; */
+    font-family: "Inter", sans-serif;
+    color: #343a40;
+    line-height: 1;
+}
+
+/*  */
+
+.accordion {
+    width: 700px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.accordion-item {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* gap: 18px; */
+    column-gap: 24px;
+    row-gap: 32px;
+}
+
+.number {
+    color: #868e96;
+}
+
+.number,
+.heading-text {
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke: #087f5b;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+
+}
+
+.hidden {
+    /* grid-column: 2; */
+    display: none;
+    transition: display ease-in 0.5s;
+
+}
+
+
+
+.hidden p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hidden ul {
+    color: #868e96;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Open state */
+.open {
+    border-top: #087f5b 4px solid;
+    transition: all ease-in-out 0.1s;
+}
+
+.open .heading-text,
+.open .number {
+    color: #087f5b;
+}
+
+.open .hidden {
+    display: block;
+    grid-column: 2;
+}
+
+.open .icon {
+    transform: rotate(180deg);
+}
